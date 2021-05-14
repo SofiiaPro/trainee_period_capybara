@@ -51,8 +51,3 @@ elsif delete_file_answer == "N"
 else
   puts "Error! Your answer should be Y/N"
 end
-
-
-
-
-
