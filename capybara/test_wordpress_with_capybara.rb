@@ -6,22 +6,27 @@ feature "Wordpress test", type: :feature do
   comments_page_name = "Comments"
   plugin_name = "Akismet Anti-Spam"
   comments_status = "Approved"
+
   home_page_url = "https://s1.demo.opensourcecms.com/wordpress/wp-login.php?redirect_to=https%3A%2F%2Fs1"
   + ".demo.opensourcecms.com%2Fwordpress%2Fwp-admin%2Fabout.php&reauth=1"
+
   Capybara.run_server = false
   Capybara.default_driver = :selenium_chrome
   Capybara.app_host = home_page_url
 
-  before(:each) do
+  def login()
     visit "/"
-    expect(page).to have_content("Powered by WordPress")
     login_input = find(:xpath, "//input[@id='user_login']")
-    password_input = find(:xpath, "//input[@id='user_pass']")
     login_input.click
     fill_in "Username", with: "opensourcecms"
+    password_input = find(:xpath, "//input[@id='user_pass']")
     password_input.click
     fill_in "Password", with: "opensourcecms"
     find(:xpath, "//input[@id='wp-submit']").send_keys :enter
+  end
+
+  before(:each) do
+    login()
   end
 
   scenario "Verify that user can navigate to the #{plugins_page_name} Page from Dashboard Panel and activate the plugins

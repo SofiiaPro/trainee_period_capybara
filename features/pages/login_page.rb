@@ -4,7 +4,7 @@ class LoginPage
   def initialize(browser)
     @browser = browser
     @username = @browser.text_field(id: "username")
-    @password = @browser.text_field(id: "password")
+    @password = @browser.text_field(id: "property.rb")
     @login_button = @browser.input(id: "loginButton")
     @session_location = @browser.li(text: "Outpatient Clinic")
   end
