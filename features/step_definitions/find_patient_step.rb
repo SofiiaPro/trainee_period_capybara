@@ -22,3 +22,4 @@ end
 
 Then(/^A user can see information about patient$/) do
 end
+

@@ -21,4 +21,3 @@ class FindPatientPage
     end
   end
 end
-

@@ -19,3 +19,4 @@ class HomePage
     @find_patient_record.click
   end
 end
+

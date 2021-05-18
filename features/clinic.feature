@@ -16,3 +16,4 @@ Feature: Login in Clinic functionality
     When A user verify that columns are not empty
     Then A user can see information about patient
     
+    

@@ -36,3 +36,4 @@ class LoginPage
     end
   end
 end
+

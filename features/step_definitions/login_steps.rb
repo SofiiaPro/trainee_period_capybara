@@ -21,3 +21,4 @@ end
 Then(/^A user should be on the users home page and see "([^"]*)"$/) do |arg|
   @LoginPage.verify_home_page_header(arg.to_s)
 end
+
