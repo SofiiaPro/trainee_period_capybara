@@ -1,12 +1,12 @@
 require "capybara/rspec"
 require "webdrivers"
+require 'yaml'
 
 feature "Wordpress test", type: :feature do
   plugins_page_name = "Plugins"
   comments_page_name = "Comments"
   plugin_name = "Akismet Anti-Spam"
   comments_status = "Approved"
-
   home_page_url = "https://s1.demo.opensourcecms.com/wordpress/wp-login.php?redirect_to=https%3A%2F%2Fs1"
   + ".demo.opensourcecms.com%2Fwordpress%2Fwp-admin%2Fabout.php&reauth=1"
 
@@ -18,10 +18,11 @@ feature "Wordpress test", type: :feature do
     visit "/"
     login_input = find(:xpath, "//input[@id='user_login']")
     login_input.click
-    fill_in "Username", with: "opensourcecms"
+    data = YAML.load_file("capybara/properties.yml")
+    fill_in "Username", with: data["login"]
     password_input = find(:xpath, "//input[@id='user_pass']")
     password_input.click
-    fill_in "Password", with: "opensourcecms"
+    fill_in "Password", with: data["password"]
     find(:xpath, "//input[@id='wp-submit']").send_keys :enter
   end
 

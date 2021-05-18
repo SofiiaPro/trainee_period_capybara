@@ -75,3 +75,4 @@ build-iPhoneSimulator/
 /bin/rpc_server
 /bin/rspec
 /bin/thor
+/capybara/properties.yml
