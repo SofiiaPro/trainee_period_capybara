@@ -20,9 +20,10 @@ group :test do
   gem "minitest"
   gem "rails"
   gem "simplecov", require: false
-  gem 'watir'
-  gem 'watir-webdriver'
-  gem 'parallel'
+  gem "watir"
+  gem "watir-webdriver"
+  gem "parallel"
+  gem "pry"
 end
 
 group :development, :test do
@@ -30,7 +31,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'cucumber-rails', require: false
+  gem "cucumber-rails", require: false
   # database_cleaner is not mandatory, but highly recommended
-  gem 'database_cleaner'
+  gem "database_cleaner"
 end

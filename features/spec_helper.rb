@@ -9,4 +9,6 @@ Capybara.app_host = home_page_url
 
 def open_properties_file
   @data = YAML.load_file("properties.yml")
+  @login = @data["login"]
+  @password = @data["password"]
 end
