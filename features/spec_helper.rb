@@ -1,4 +1,4 @@
-require "capybara/rspec"
+require 'capybara/rspec'
 
 home_page_url = "https://s1.demo.opensourcecms.com/wordpress/wp-login.php?redirect_to=https%3A%2F%2Fs1" +
   ".demo.opensourcecms.com%2Fwordpress%2Fwp-admin%2Fabout.php&reauth=1/eng"
