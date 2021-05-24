@@ -12,7 +12,7 @@ class LoginPage
     find(:css, "#user_pass").click
   end
 
-  def get_submit_button
+  def submit_button
     find(:css, "#wp-submit")
   end
 end

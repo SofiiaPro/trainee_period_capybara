@@ -10,5 +10,5 @@ def login
   fill_in "Username", with: @login
   login_page.click_on_password_field
   fill_in "Password", with: @password
-  login_page.get_submit_button.send_keys :enter
+  login_page.submit_button.send_keys :enter
 end

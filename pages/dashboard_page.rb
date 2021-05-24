@@ -4,15 +4,6 @@ require 'capybara/dsl'
 class DashboardPage
   include Capybara::DSL
 
-  def get_dashboard_elements_name
-    @plugins_page_title = "Plugins"
-    @comments_page_title = "Comments"
-    @plugin_name = "Akismet Anti-Spam"
-    @comments_status = "Approved"
-    @wordpress_home_page_title = "WordPress"
-    @post_title = "ruby test"
-  end
-
   def click_plugins_menu_item
     find(:id, "menu-plugins").click
   end
@@ -25,16 +16,16 @@ class DashboardPage
     find(:id, "wp-admin-bar-wp-logo").click
   end
 
-  def click_add_content_button
+  def add_content_button
     find(:id, "wp-admin-bar-new-content")
   end
 
-  def click_close_popup_menu
+  def close_popup_menu
     find(:xpath, "//div[@class='components-modal__content']//button[@aria-label = 'Close
 dialog']").click
   end
 
-  def click_add_textarea_title
+  def add_textarea_title
     find(:id, "post-title-0").click
   end
 
