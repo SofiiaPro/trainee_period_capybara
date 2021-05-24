@@ -37,8 +37,7 @@ dialog']").click
     find(:xpath, "//ul[@class='subsubsub']//li[@class ='approved']").click
   end
 
-  def check_selected_status
-    selected_approved_status = find(:xpath, "//a[@class = 'current' and contains(text(), 'Approved')]")
-    expect(selected_approved_status).to true
+  def selected_status
+    find(:xpath, "//a[@class = 'current' and contains(text(), 'Approved')]")
   end
 end

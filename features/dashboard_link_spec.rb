@@ -27,7 +27,7 @@ plugin: #{$plugin_name}" do
     dashboard_page.click_on_comments_menu_item
     expect(page).to have_content($comments_page_title)
     dashboard_page.click_comments_approved_status
-    dashboard_page.check_selected_status
+    expect(dashboard_page.selected_status).should be
   end
 
   scenario "Verify that clicking on wordpress_icon_button on the navigation menu redirects to the Wordpress home
