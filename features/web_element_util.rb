@@ -1,0 +1,6 @@
+$plugins_page_title = "Plugins"
+$comments_page_title = "Comments"
+$plugin_name = "Akismet Anti-Spam"
+$comments_status = "Approved"
+$wordpress_home_page_title = "WordPress"
+$post_title = "ruby test"
